@@ -1,0 +1,211 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  transform-style: preserve-3d;
+}
+.fly {
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  z-index: 100;
+  transition: transform,background 0.3s;
+}
+.enemy {
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  z-index: 100;
+}
+.fps {
+  width: 50px;
+  height: 16px;
+  color: #FFF;
+  text-align: left;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.defence {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  transition: transform 0.5s;
+  z-index: 101;
+}
+.bullet {
+  position: fixed;
+  z-index: 80;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dropD,
+.dropR,
+.dropB,
+.dropU {
+  position: fixed;
+  z-index: 101;
+  width: 30px;
+  height: 30px;
+  background: url(../imgs/cut/defence.png) no-repeat 0 0 / cover;
+}
+.dropR {
+  background: url(../imgs/cut/hp.png) no-repeat 0 0 / cover;
+}
+.dropB {
+  background: url(../imgs/cut/boom.png) no-repeat 0 0 / cover;
+}
+.dropU {
+  background: url(../imgs/cut/upLevel.png) no-repeat 0 0 / cover;
+}
+.boom-gif {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  z-index: 99;
+  background: url(../imgs/blow.gif) no-repeat center center / cover;
+}
+.bossboom-gif {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  z-index: 99;
+  background: url(../imgs/blow.gif) no-repeat center center / cover;
+}
+#bg {
+  width: 100%;
+  height: 10000px;
+  background: url(../imgs/test2.jpg) repeat-y left bottom / contain;
+  position: fixed;
+  bottom: 0;
+}
+.status_bar {
+  display: none;
+  width: 220px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.status_bar > .logo {
+  border: 2px solid #FFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+}
+.status_bar > .level {
+  display: block;
+  font-style: normal;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ff9900;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+}
+.status_bar > .hp-box {
+  width: 160px;
+  height: 12px;
+  box-sizing: border-box;
+  border: 1.8px solid #FFF;
+  border-radius: 8px;
+  position: absolute;
+  top: 10px;
+  overflow: hidden;
+}
+.status_bar > .hp-box > .hp-current {
+  width: 100%;
+  height: 100%;
+  background-color: #00ff40;
+  border-radius: 8px;
+  transition: width 0.5s;
+}
+.status_bar > .score-box {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: 50px;
+  color: #FFF;
+  text-align: right;
+}
+.status_bar > .score-box > .score {
+  color: deepskyblue;
+  padding-right: 10px;
+}
+.status_bar > .item-box {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: 30px;
+  text-align: left;
+}
+.status_bar > .item-box .defence-icon {
+  color: #fff;
+  text-align: right;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: url(../imgs/cut/defence.png) no-repeat 0 0 / contain;
+  margin-right: 10px;
+}
+.status_bar > .item-box .boom-icon {
+  color: #fff;
+  text-align: right;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: url(../imgs/cut/boom.png) no-repeat 0 0 / contain;
+}
+.p1 {
+  left: 0;
+}
+.p1 .logo {
+  left: 5px;
+}
+.p1 .level {
+  left: 40px;
+}
+.p1 .hp-box {
+  right: 0;
+}
+.p1 .score-box {
+  right: 0;
+}
+.p1 .item-box {
+  right: 0;
+}
+.p2 {
+  right: 0;
+}
+.p2 .logo {
+  right: 5px;
+}
+.p2 .level {
+  right: 40px;
+}
+.p2 .hp-box {
+  left: 0;
+}
+.p2 .score-box {
+  left: 0;
+}
